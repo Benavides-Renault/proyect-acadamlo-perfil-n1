@@ -9,9 +9,9 @@ function changeLanguage() {
 
 	languageToggle.addEventListener('change', () => {
 		if (languageToggle.checked) {
-			window.location.href = '/portafolio/assets/html/ingles.html';
+			window.location.href = '../../html/ingles.html';
 		} else {
-			window.location.href = '/portafolio/index.html';
+			window.location.href = '../../../index.html';
 		}
 	});
 }
