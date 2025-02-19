@@ -1,18 +1,16 @@
 const languageToggle = document.getElementById('language-toggle');
 
 function changeLanguage() {
-	if (window.location.pathname.includes('ingles.html')) {
-		languageToggle.checked = true;
-	} else {
-		languageToggle.checked = false;
-	}
+	const isEnglish = window.location.pathname.includes(
+		'/assets/html/ingles.html',
+	);
+
+	languageToggle.checked = isEnglish;
 
 	languageToggle.addEventListener('change', () => {
-		if (languageToggle.checked) {
-			window.location.href = '../../html/ingles.html';
-		} else {
-			window.location.href = '../../../index.html';
-		}
+		window.location.replace(
+			languageToggle.checked ? '/assets/html/ingles.html' : '/index.html',
+		);
 	});
 }
 
